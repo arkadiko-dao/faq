@@ -25,3 +25,12 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+
+
+
+@layer components {
+  a {
+    @apply underline font-medium text-indigo-700 rounded-md px-1.5 py-1 bg-indigo-900 dark:text-white dark:focus:ring-indigo-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
+  }
+}
