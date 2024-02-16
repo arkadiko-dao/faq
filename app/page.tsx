@@ -6,10 +6,10 @@ export default async function Home() {
   const questions = await getAllQuestions();
 
   return (
-    <main className="flex flex-col items-center justify-between p-24">
-      <div className="relative flex place-items-center before:absolute before:h-[700px] before:w-[800px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[2580px] after:w-[150px] after:translate-x-1/5 after:bg-gradient-conic after:from-indigo-200 after:via-indigo-200 after:rotate-[70deg] after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-indigo-700 before:dark:opacity-5 after:dark:from-indigo-900 after:dark:via-indigo-500 after:dark:opacity-60 z-[-1]">
+    <main className="flex flex-col items-center justify-between p-24 overflow-hidden">
+      <div className="relative flex place-items-center before:absolute before:h-[700px] before:w-[800px] before:-translate-x-1/2 before:rounded-full before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[2580px] after:w-[150px] after:translate-x-1/5 after:bg-gradient-conic after:from-indigo-200 after:via-indigo-200 after:rotate-[70deg] after:blur-2xl after:content-[''] before:bg-gradient-to-br before:from-transparent before:to-indigo-700 before:opacity-5 after:from-indigo-900 after:via-indigo-500 after:opacity-60 z-[-1]">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+          className="relative drop-shadow-[0_0_0.3rem_#ffffff70] invert"
           src="/arkadiko.svg"
           alt="Arkadiko Finance Logo"
           width={214}
@@ -27,13 +27,13 @@ export default async function Home() {
           return (
             <li
               key={id}
-              className="relative group rounded-lg border px-5 py-4 transition-colors bg-gray-100 dark:border-neutral-700 hover:dark:border-neutral-800 dark:bg-neutral-800/30"
+              className="relative group rounded-lg border px-5 py-4 transition-colors border-neutral-700 hover:border-neutral-800 bg-neutral-800/30"
             >
               <h2 className={`mb-3 text-2xl font-semibold`}>{title}</h2>
               <div dangerouslySetInnerHTML={{ __html: html }} />
 
               <Link
-                className="absolute bottom-0 right-0 !bg-transparent border-t !rounded-r-none !rounded-b-none rounded-tl-lg border-l dark:border-neutral-700 hover:dark:border-neutral-800 invisible group-hover:visible transition ease-in-out duration-200"
+                className="absolute bottom-0 right-0 !bg-transparent border-t !rounded-r-none !rounded-b-none rounded-tl-lg border-l border-neutral-700 hover:border-neutral-800 invisible group-hover:visible transition ease-in-out duration-200"
                 href={`/q/${id}`}
               >
                 <svg
